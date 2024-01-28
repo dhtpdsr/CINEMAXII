@@ -246,7 +246,6 @@
     <script>
         var tombol = [];
         var id_film;
-        var a;
         $('#exampleModal').on('shown.bs.modal', function () {
             $.ajax({
                 url: '<?php echo $this->basePath()?>/application/film/readdata?id_film='+id_film, // ini API nya
