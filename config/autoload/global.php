@@ -15,16 +15,19 @@ return array(
     // ...
     'db' => array(
     'driver' => 'Pdo',
-    'dsn' => 'mysql:dbname=ian99;host=127.0.0.1:33064',
+    'dsn' => 'mysql:dbname=cinemaxii;host=127.0.0.1;charset=utf8',
     'username' => 'root',
-    'password' => 'Test123',
-    'driver_options' => array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\'')
+    'password' => '',
+    'driver_options' => array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8')
     ),
     'service_manager' => array(
     'aliases' => array(
         'db' => 'Zend\Db\Adapter\Adapter',
         ),
     ),
-
+    'phpSettings' => array(
+        'date.timezone' => 'Asia/Jakarta', // Set the timezone to UTC
+    ),
 );
+
 ?>

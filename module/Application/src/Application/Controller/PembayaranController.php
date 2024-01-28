@@ -5,15 +5,15 @@ namespace Application\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
-class AlamController extends AbstractActionController{
+class PembayaranController extends AbstractActionController{
     private $config;
     private $db;
   
-    public function alamAction(){
+    public function pembayaranAction(){
         $this->config = $this->getServiceLocator()->get('Config'); //mengambil basis data autoconfig
         $this->db = $this->config['db'];
     
-        $alam = new \Application\Model\Alam2($this->db);
+        $alam = new \Application\Model\Pembayaran($this->db);
         $data = $alam->read();
         
         $response = $this->getResponse();

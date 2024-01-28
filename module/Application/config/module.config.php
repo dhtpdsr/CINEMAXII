@@ -74,7 +74,7 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'Application\Controller\Index' => 'Application\Controller\IndexController',
-            'Application\Controller\Alam' => 'Application\Controller\AlamController'
+            'Application\Controller\Film' => 'Application\Controller\FilmController'
         ),
     ),
     'view_manager' => array(
@@ -100,4 +100,5 @@ return array(
             ),
         ),
     ),
+
 );
