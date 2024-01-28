@@ -245,27 +245,7 @@
     </script>
     <script>
         var tombol = [];
-        var id_film;
-        $('#exampleModal').on('shown.bs.modal', function () {
-            $.ajax({
-                url: '<?php echo $this->basePath()?>/application/film/readdata?id_film='+id_film, // ini API nya
-                type: "GET",
-                dataType: 'json',
-                success: function (response) {
-                    var dataFilm = response;
-                    console.log(response[0].nama_film, tombol.length);
-                    var total = response[0].harga_tiket * tombol.length;
-
-                    document.getElementById('judul_film').innerHTML = "<p>" + response[0].nama_film + "</p>";
-                    document.getElementById('jam_tayang').innerHTML = "<p>" + response[0].jam_tayang + "</p>";
-                    document.getElementById('harga_tiket').innerHTML = "<p> Rp."+response[0].harga_tiket + "</p>";
-                    document.getElementById('jml_tiket').innerHTML = "<p>" + tombol.length + "</p>";
-                    document.getElementById('total_harga').innerHTML = "<p> Rp." + total + "</p>";
-                    
-                }
-
-            });
-        });
+      
         $(document).ready(function () {
             // Mendapatkan semua elemen tombol dengan kelas "btn-outline-dark"
             var buttons = document.querySelectorAll('.btn-outline-dark');
